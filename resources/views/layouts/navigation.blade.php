@@ -15,6 +15,24 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="'#'">
+                        {{ __('Materials') }}
+                    </x-nav-link>
+
+                    <x-nav-link
+                        :href="route('quiz-modules.index')"
+                        :active="request()->routeIs('quiz-modules.index')"
+                    >
+                        {{ __('Quiz Modules') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="'#'">
+                        {{ __('Questions') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="'#'">
+                        {{ __('Start Game') }}
+                    </x-nav-link>
                 </div>
             </div>
 
