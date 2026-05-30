@@ -15,7 +15,7 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="'#'">
+                    <x-nav-link :href="route('materials.index')" :active="request()->routeIs('materials.*')">
                         {{ __('Materials') }}
                     </x-nav-link>
 
@@ -26,12 +26,16 @@
                         {{ __('Quiz Modules') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="'#'">
-                        {{ __('Questions') }}
+                    <x-nav-link 
+                        :href="route('questions.index')" 
+                        :active="request()->routeIs('questions.index')">
+                        Questions
                     </x-nav-link>
 
-                    <x-nav-link :href="'#'">
-                        {{ __('Start Game') }}
+                    <x-nav-link 
+                        :href="route('game.create')" 
+                        :active="request()->routeIs('game.create')">
+                        Mulai Game
                     </x-nav-link>
                 </div>
             </div>
@@ -87,6 +91,18 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('materials.index')" :active="request()->routeIs('materials.*')">
+                {{ __('Materials') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('quiz-modules.index')" :active="request()->routeIs('quiz-modules.*')">
+                {{ __('Quiz Modules') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('questions.index')" :active="request()->routeIs('questions.*')">
+                {{ __('Questions') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('game.create')" :active="request()->routeIs('game.*')">
+                {{ __('Mulai Game') }}
             </x-responsive-nav-link>
         </div>
 
